@@ -1,9 +1,6 @@
 {
   "development": {
-    "username": "ce0eh4k1m0rpqyv5",
-    "password": "s5o2ewuvbhn4jqtg",
-    "database": "l3xkdbedxikdjw1v",
-    "host": "izm96dhhnwr2ieg0.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql",
     "port": 3306,
     "operatorsAliases": false
