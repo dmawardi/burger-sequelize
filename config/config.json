@@ -5,6 +5,7 @@
     "database": "l3xkdbedxikdjw1v",
     "host": "izm96dhhnwr2ieg0.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
+    "port": 3306,
     "operatorsAliases": false
   }
 }
