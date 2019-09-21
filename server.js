@@ -8,6 +8,8 @@ var path = require('path');
 // Init express server and port
 var app = express();
 var PORT = process.env.PORT || 8000;
+// Init database
+var db = require("./models");
 
 // Set template engine to handlebars and default layout to main
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -23,7 +25,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
-  // Log (server-side) when our server has started
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
   console.log("Server listening on: http://localhost:" + PORT);
+
+  });
 });

@@ -1,0 +1,26 @@
+{
+  "name": "burger-sequelize",
+  "version": "1.0.0",
+  "description": "Web Application Development Bootcamp Week 15: Sequelize Burger",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmawardi/burger-sequelize.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dmawardi/burger-sequelize/issues"
+  },
+  "homepage": "https://github.com/dmawardi/burger-sequelize#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.19.0"
+  }
+}

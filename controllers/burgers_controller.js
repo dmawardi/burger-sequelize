@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var burger = require('../models/burger');
+var burger = require('./burger');
 var exphbs = require('express-handlebars');
 
 // Home Page route
@@ -17,12 +17,14 @@ router.post('/api/burgers', function(req, res){
     // Grab new burger name from request body JSON
     let newBurger = req.body.burger_name;
     // Create new burger record then
-    burger.create(newBurger).then(function(){
+    burger.create(newBurger).then(function(data){
         // Send to user 200 (OK) status that operation completed
+        console.log('completed', data)
         res.sendStatus(200);
 
     }).catch(function(err){
         // Alert the user the request has failed
+        console.log('error:', err)
         res.sendStatus(500);
     });
 });
