@@ -12,7 +12,7 @@ let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
-  sequelize = new Sequelize("mysql://ce0eh4k1m0rpqyv5:s5o2ewuvbhn4jqtg@izm96dhhnwr2ieg0.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/l3xkdbedxikdjw1v"    );
+  sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
 fs
